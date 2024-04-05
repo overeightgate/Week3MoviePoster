@@ -20,8 +20,40 @@
                 <span class="movie-duration">1h 55m</span>
             </p>
             <div class="movie-poster-container">
-                <img src="images/freeGuy.jpg" alt="Free Guy Poster">
-            </div>
+                <div class="container">
+                    <img src="images/freeGuy.jpg" alt="Free Guy Poster" class="movie-poster">
+            
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="closeBtn">&times;</span>
+                            <img alt="" class="movie-poster-modal">
+                            <h1>Free Guy! (2021)</h1>
+                        </div>
+                    </div>
+                </div>
+            
+                <script>
+                    let moviePoster = document.querySelector('.movie-poster');
+                    let modal = document.querySelector('#myModal');
+                    let closeBtn = document.querySelector('.closeBtn');
+                    let modalImage = document.querySelector('.movie-poster-modal');
+            
+                    moviePoster.addEventListener('click', () => {
+                        console.log('image clicked');
+                        modal.style.display = 'block';
+                        modalImage.src = moviePoster.src;
+                    });
+            
+                    closeBtn.addEventListener('click', () => {
+                        modal.style.display = 'none';
+                    });
+            
+                    window.addEventListener('click', (event) => {
+                        if (event.target === modal) {
+                            modal.style.display = 'none';
+                        }
+                    });
+                </script>
 
             <div class="movie-info-container">
                 <p class="movie-info-quote">Life's too short to be a background character.</p>

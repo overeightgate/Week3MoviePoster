@@ -1,24 +1,60 @@
-.roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-  
-.roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-  
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(56, 48, 48, 0.63);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+}
+
+.modal-content {
+    background-color: #255ef9;
+    margin: 5% auto;
+    padding: 5rem;
+    width: 30%;
+    height: 75%;
+    animation: zoom-in 1s;
+}
+
+@keyframes zoom-in {
+    0% {transform: sc;}
+}
+
+.closeBtn {
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.movie-poster {
+    width: 300px;
+    cursor: pointer;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
 html {
-    font-family: Roboto;
+    font-family: "Roboto";
     color: #151515;
 }
 
@@ -42,7 +78,7 @@ html {
 }
 
 .movie-poster-container img:hover {
-    transform: scale (1.1);
+    transform: scale(1.1);
     box-shadow: 8px 8px 8px -4px rgb(78, 99, 119);
 }
 
@@ -64,7 +100,7 @@ html {
 }
 
 .movie-duration:before {
-    content: ' \2022';
+    content: '\2022';
 }
 
 .movie-info-quote {
@@ -119,7 +155,6 @@ footer {
     margin-top: 2rem;
     text-align: center;
     color: #000000;
-    
 }
 
 footer ul {
